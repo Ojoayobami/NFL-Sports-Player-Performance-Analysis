@@ -175,7 +175,7 @@ The raw dataset included multiple tables (Player Stats, Combine Results, Draft D
 | **8. Data Merging** | Combined multiple tables (Combine, Draft, and Team Performance) using Player ID and Year as primary keys. |
 | **9. Calculated Columns & Measures** | Created DAX measures for YoY changes, averages, and performance ratios to enhance analytical depth. |
 | **10. Validation** | Cross-checked totals, averages, and YoY metrics with sample data to ensure calculation accuracy. |
-| **11. 64-bit Power BI Memory Fix** | Encountered a model size error in Power BI Desktop (32-bit). Migrated the project to **Power BI 64-bit version**, increasing memory handling capacity for large datasets. This allowed for smooth model refresh and measure calculations without crashing. |
+| **11. 64-bit Power BI Memory Fix** | Encountered a model size error in Power BI Desktop (32-bit). Identified that Power Query had automatically added a **“Changed Type”** step during import. Removed that step and **manually redefined column data types** to prevent automatic Int64 conversion. |
 
 ---
 
@@ -203,22 +203,6 @@ After cleaning and transformation:
 
 💡 *This process ensured that every visualization and metric in the dashboard is accurate, efficient, and optimized for high-performance analytics.*
 
-## 📊 Exploratory Data Analysis (EDA)
-
-After cleaning and preparing the dataset, an Exploratory Data Analysis (EDA) was conducted to understand player performance patterns, positional trends, and relationships between combine, draft, and career outcomes.  
-The EDA helped uncover early insights that shaped subsequent modeling, visualization, and hypothesis testing.
-
----
-
-### 🧠 Key Objectives
-The goal of this phase was to:
-- Identify **distributions**, **outliers**, and **missing patterns** across variables.  
-- Explore how **physical metrics (Height, Weight, 40YD, Bench, Vertical)** relate to player performance.  
-- Analyze **fantasy point trends** across positions and years.  
-- Understand how **college performance** and **draft rounds** impact long-term success.  
-- Establish relationships between **rookie/veteran contributions** and **team win percentages**.
-
----
 
 ## 🔍 Exploratory Data Analysis (EDA)
 
@@ -229,6 +213,14 @@ EDA focused on:
 - Draft details (Round, Pick, Team)
 - Career outcomes (Games Played, Fantasy Points)
 - College and conference contributions
+
+### 🧠 Key Objectives
+The goal of this phase was to:
+- Identify **distributions**, **outliers**, and **missing patterns** across variables.  
+- Explore how **physical metrics (Height, Weight, 40YD, Bench, Vertical)** relate to player performance.  
+- Analyze **fantasy point trends** across positions and years.  
+- Understand how **college performance** and **draft rounds** impact long-term success.  
+- Establish relationships between **rookie/veteran contributions** and **team win percentages**.
 
 ### 🧩 Key Findings
 - Average player age is **26**, with performance peaking at **ages 23–25**.  
@@ -242,6 +234,255 @@ EDA focused on:
 - **Maps:** Visualized player distribution by state and position.  
 - **YoY Line Charts:** Showed changes in average fantasy points, draft rounds, and win percentages over time.
 
+## 📈 Statistical Analysis
+
+Statistical analysis was conducted to understand the relationships between combine metrics, player demographics, draft outcomes, and career performance.  
+The goal was to determine which measurable factors best predict player success in the NFL.
+
+### 🔹 Key Statistical Methods
+- **Correlation Analysis:**  
+  Explored relationships between combine metrics (40YD, Bench Press, Vertical) and performance indicators such as Fantasy Points, Games Played, and Career Length.
+- **Averages and Ratios:**  
+  Calculated averages like **Average Fantasy Point**, **Average Win %**, and **Average Draft Round** to compare performance across positions, teams, and conferences.
+- **YoY (Year-over-Year) Analysis:**  
+  Measured yearly percentage changes in key metrics (e.g., Fantasy Points, Draft Round, Team Wins) to track player and team performance trends from 1999–2023.
+- **Group Aggregation:**  
+  Used DAX and Power BI measures to analyze grouped data — such as **Average Rushing/Receiving/Passing Yards by Conference** and **Rookie vs Veteran Contribution**.
+- **Ranking & Indexing:**  
+  Created calculated fields like **Talent Distribution Index**, **Player Rank**, and **Draft Tier** to categorize players based on performance tiers.
+
+## 🧠 Insights and Recommendations
+
+---
+
+### 🏈 Player Performance Overview
+
+**Insights**
+- The top-performing players across years include **Peyton Manning**, **Tom Brady**, and **Drew Brees** — all consistently maintaining high fantasy point totals, with Manning showing peak years in the mid-2000s and Brees demonstrating strong, sustained performance over time.  
+- Fantasy points increased steadily (**↑7.92% YoY**), driven by elite QBs like Brees, Manning, and Brady.  
+- Players aged **23–25** deliver the highest fantasy points; performance declines after age 30.  
+- QBs dominate passing, WRs lead in receiving, and RBs excel in rushing.  
+- **Tampa Bay (TAM)** and **Arizona (ARI)** produce the most elite players. Top colleges include **Miami (FL)**, **Tennessee**, and **Michigan**.  
+- Players around **72–75 inches** and **200–219 lbs** record top fantasy scores.
+
+**Recommendations**
+- Focus scouting and training programs on **young quarterbacks** (ages 23–25) for long-term value.  
+- Maintain **positional balance** and emphasize role-specific strengths.  
+- Strengthen **college recruitment partnerships** with top-performing schools.  
+- Integrate **physical profiling** into scouting decisions.
+
+---
+
+### 🧩 Combine and Draft Analysis
+
+**Insights**
+- Players with high **Vertical Jump** and fast **40-yard dash** scores perform better early in their careers.  
+- Higher **Wonderlic scores** modestly correlate with better quarterback performance.  
+- Schools like **Miami (FL)**, **Michigan**, and **Florida** consistently produce more NFL draft picks.  
+- **Early-round picks** have longer NFL careers than undrafted players.  
+- **Free Safeties (FS)** and **Wide Receivers (WR)** excel in vertical jumps; **Defensive Ends (DE)** and **Strong Safeties (SS)** lead in 40-yard dash and bench press.  
+- Strong combine metrics (speed, strength, explosiveness) correlate with higher early-career fantasy points.
+
+**Recommendations**
+- Prioritize combine metrics such as **speed, explosiveness, and strength** during scouting.  
+- Use **Wonderlic scores** mainly for evaluating QBs and offensive linemen.  
+- Focus on **early-round picks** for stability but track standout undrafted players.  
+- Correlate combine metrics with fantasy output to refine scouting accuracy.
+
+---
+
+### 🎓 College and Conference Insights
+
+**Insights**
+- Colleges like **Miami (FL)**, **Michigan**, and **Florida** consistently produce top NFL players.  
+- The **Big 12** leads in performance (40.08%), followed by **MAC (30.3%)** and **ACC (29.62%)**.  
+- Winning college teams (e.g., **Michigan**, **Notre Dame**, **Miami**) have more NFL draft picks.  
+- **Big Ten** produces elite QBs and TEs, while **SEC** dominates RBs and WRs.  
+- **Mountain West** and **ACC** players are drafted earlier on average.  
+- Rookies from top colleges score almost **2× higher fantasy points** than others.
+
+**Recommendations**
+- Strengthen scouting focus on **Big 12**, **SEC**, and **top-tier colleges**.  
+- Prioritize recruits from **winning programs** for higher transition success.  
+- Match position scouting with each conference’s proven strength areas.
+
+---
+
+### 🌍 Geographic Analysis
+
+**Insights**
+- **California (259)**, **Texas (222)**, and **Florida (196)** produce the most NFL players.  
+- Top hometowns include **College Park**, **Okinawa**, and **Rosebud**, which consistently yield successful players.  
+- **JP**, **Nevada**, **PH**, and **West Virginia** show emerging regional performance.  
+- Key states like **California**, **Texas**, **Florida**, and **Louisiana** lead by position distribution.  
+- **Urban areas** produce slightly more NFL players (**54.74%**) than rural areas (**45.26%**).  
+- Most players come from **small towns (<50K population)**.
+
+**Recommendations**
+- Focus scouting in **California, Texas, and Florida** — proven player hotspots.  
+- Expand search into **non-traditional and smaller regions** for untapped talent.  
+- Invest in **grassroots development** in rural communities to widen future pipelines.
+
+---
+
+### 🏆 Team and League Performance
+
+**Insights**
+- Top win percentages: **Ohio State (21.33%)**, **LSU (20.38%)**, **Georgia (19.72%)**, **Florida (19.40%)**, and **Wisconsin (19.16%)**.  
+- Mid-range draft teams like **Western Michigan** and **Kent State** perform better long-term.  
+- Teams such as **Arkansas State**, **Idaho**, and **Troy** rely heavily on veteran players.  
+- **Clemson**, **Florida State**, and **Georgia Tech** generate the highest fantasy totals (~48K).  
+- Conferences like **SEC**, **Big Ten**, and **ACC** lead in total team wins.  
+- **Army**, **BYU**, and **Notre Dame** maintain the most balanced talent distribution (33.33%).
+
+**Recommendations**
+- Target athletes from **high-performing college programs** for recruitment.  
+- Benchmark winning patterns from **SEC** and **Big Ten** conferences.  
+- Encourage **rookie integration** in veteran-heavy teams for long-term depth.  
+- Use **talent distribution metrics** to assess roster versatility.
+
+## 📊 Dashboard Overview
+
+The **NFL Sports & Player Performance Dashboard** provides a comprehensive view of player statistics, team success, and career outcomes from **1999 onward**.  
+It is divided into five key pages that connect data from combine metrics, college performance, and player outcomes across teams and regions.
+
+---
+
+### 🏈 Player Performance Overview
+![Player Performance Dashboard](## 📊 Dashboard Overview
+
+The **NFL Sports & Player Performance Dashboard** provides a comprehensive view of player statistics, team success, and career outcomes from **1999 onward**.  
+It is divided into five key pages that connect data from combine metrics, college performance, and player outcomes across teams and regions.
+
+---
+
+### 🏈 Player Performance Overview
+![Player Performance Dashboard](https://github.com/yourusername/yourrepo/blob/main/images/player_performance.png)
+
+**Description:**  
+Analyzes player performance across years, positions, and teams. Highlights top players, age trends, and fantasy point leaders.
+
+**Key Visuals Used:**  
+Bar charts, column charts, YoY trend lines.
+
+---
+
+### 📊 Combine and Draft Analysis
+![Combine and Draft Analysis Dashboard](https://github.com/yourusername/yourrepo/blob/main/images/combine_draft.png)
+
+**Description:**  
+Examines how combine metrics (40YD, Bench, Vertical) and draft rounds relate to career success and early fantasy performance.
+
+**Key Visuals Used:**  
+Clustered column charts, scatter plots, YoY comparisons.
+
+---
+
+### 🎓 College and Conference Insights
+![College and Conference Insights Dashboard](https://github.com/yourusername/yourrepo/blob/main/images/college_conference.png)
+
+**Description:**  
+Compares college performance, draft production, and conference dominance. Shows which colleges consistently produce NFL talent.
+
+**Key Visuals Used:**  
+Bar charts, clustered visuals, KPI cards.
+
+---
+
+### 🌍 Geographic Analysis
+![Geographic Analysis Dashboard](https://github.com/yourusername/yourrepo/blob/main/images/geographic_analysis.png)
+
+**Description:**  
+Displays where NFL players come from, comparing states, hometowns, and population sizes. Highlights key hotspots for player production.
+
+**Key Visuals Used:**  
+Map visuals, bar charts, filters by position and region.
+
+---
+
+### 🏆 Team and League Performance
+![Team and League Performance Dashboard](https://github.com/yourusername/yourrepo/blob/main/images/team_league.png)
+
+**Description:**  
+Analyzes team win percentages, rookie-veteran balance, and fantasy point totals to reveal long-term performance patterns.
+
+**Key Visuals Used:**  
+Column charts, bar charts, YoY trend visuals.
+
+---
+
+### ⚙️ Interactivity and Filters
+- Filters by **Year**, **Position**, **Team**, **College**, and **Conference**  
+- Dynamic slicers for **Draft Round**, **Combine Metrics**, and **Age Group**  
+- Hover tooltips for detailed player-level insights
+
+---
+
+> 🧩 Built and designed in **Power BI (v2024.3)**  
+> 📈 Focus: Connecting player attributes, performance data, and career success
+)
+
+**Description:**  
+Analyzes player performance across years, positions, and teams. Highlights top players, age trends, and fantasy point leaders.
+
+**Key Visuals Used:**  
+Bar charts, column charts, YoY trend lines.
+
+---
+
+### 📊 Combine and Draft Analysis
+![Combine and Draft Analysis Dashboard](https://github.com/yourusername/yourrepo/blob/main/images/combine_draft.png)
+
+**Description:**  
+Examines how combine metrics (40YD, Bench, Vertical) and draft rounds relate to career success and early fantasy performance.
+
+**Key Visuals Used:**  
+Clustered column charts, scatter plots, YoY comparisons.
+
+---
+
+### 🎓 College and Conference Insights
+![College and Conference Insights Dashboard](https://github.com/yourusername/yourrepo/blob/main/images/college_conference.png)
+
+**Description:**  
+Compares college performance, draft production, and conference dominance. Shows which colleges consistently produce NFL talent.
+
+**Key Visuals Used:**  
+Bar charts, clustered visuals, KPI cards.
+
+---
+
+### 🌍 Geographic Analysis
+![Geographic Analysis Dashboard](https://github.com/yourusername/yourrepo/blob/main/images/geographic_analysis.png)
+
+**Description:**  
+Displays where NFL players come from, comparing states, hometowns, and population sizes. Highlights key hotspots for player production.
+
+**Key Visuals Used:**  
+Map visuals, bar charts, filters by position and region.
+
+---
+
+### 🏆 Team and League Performance
+![Team and League Performance Dashboard](https://github.com/yourusername/yourrepo/blob/main/images/team_league.png)
+
+**Description:**  
+Analyzes team win percentages, rookie-veteran balance, and fantasy point totals to reveal long-term performance patterns.
+
+**Key Visuals Used:**  
+Column charts, bar charts, YoY trend visuals.
+
+---
+
+### ⚙️ Interactivity and Filters
+- Filters by **Year**, **Position**, **Team**, **College**, and **Conference**  
+- Dynamic slicers for **Draft Round**, **Combine Metrics**, and **Age Group**  
+- Hover tooltips for detailed player-level insights
+
+---
+
+> 🧩 Built and designed in **Power BI (v2024.3)**  
+> 📈 Focus: Connecting player attributes, performance data, and career success
 
 
 
