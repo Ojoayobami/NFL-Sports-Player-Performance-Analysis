@@ -336,7 +336,7 @@ The goal was to determine which measurable factors best predict player success i
 ## 📊 Dashboard Overview
 
 The **NFL Sports & Player Performance Dashboard** provides a comprehensive view of player statistics, team success, and career outcomes from **1999 onward**.  
-It is divided into five key pages that connect data from combine metrics, college performance, and player outcomes across teams and regions.
+It is divided into seven key pages that connect data from combine metrics, college performance, and player outcomes across teams and regions.
 
 ---
 
