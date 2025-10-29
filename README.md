@@ -183,8 +183,7 @@ The raw dataset included multiple tables (Player Stats, Combine Results, Draft D
 
 | Tool | Purpose |
 |------|----------|
-| **Power BI (64-bit, version 2024.3)** | Main platform for data modeling, measure creation, and visualization. |
-| **Excel** | Used for initial cleaning, validation, and lookup checks. |
+| **Excel** | Used for initial cleaning. |
 | **Power Query (M Language)** | Applied for data transformation, joins, and normalization. |
 | **DAX** | Created custom measures and calculated columns (e.g., YoY%, Ratios, Indexes). |
 
@@ -221,13 +220,6 @@ The goal of this phase was to:
 - Analyze **fantasy point trends** across positions and years.  
 - Understand how **college performance** and **draft rounds** impact long-term success.  
 - Establish relationships between **rookie/veteran contributions** and **team win percentages**.
-
-### 🧩 Key Findings
-- Average player age is **26**, with performance peaking at **ages 23–25**.  
-- **Quarterbacks and Wide Receivers** generate the highest fantasy points overall.  
-- A positive correlation exists between **40YD speed** and **career length**.  
-- Players from **SEC and Big 12** conferences consistently outperform others.  
-- Fantasy points and wins have shown a **steady YoY increase of 7–8%**.  
 
 ### 📊 Visualization Methods
 - **Bar and Column Charts:** Used to compare player positions, team performance, and college representation.  
@@ -349,22 +341,11 @@ It is divided into five key pages that connect data from combine metrics, colleg
 ---
 
 ### 🏈 Player Performance Overview
-![Player Performance Dashboard](## 📊 Dashboard Overview
-
-The **NFL Sports & Player Performance Dashboard** provides a comprehensive view of player statistics, team success, and career outcomes from **1999 onward**.  
-It is divided into five key pages that connect data from combine metrics, college performance, and player outcomes across teams and regions.
-
----
-
-### 🏈 Player Performance Overview
 ![Player Performance Dashboard](https://github.com/yourusername/yourrepo/blob/main/images/player_performance.png)
 
 **Description:**  
 Analyzes player performance across years, positions, and teams. Highlights top players, age trends, and fantasy point leaders.
 
-**Key Visuals Used:**  
-Bar charts, column charts, YoY trend lines.
-
 ---
 
 ### 📊 Combine and Draft Analysis
@@ -372,9 +353,6 @@ Bar charts, column charts, YoY trend lines.
 
 **Description:**  
 Examines how combine metrics (40YD, Bench, Vertical) and draft rounds relate to career success and early fantasy performance.
-
-**Key Visuals Used:**  
-Clustered column charts, scatter plots, YoY comparisons.
 
 ---
 
@@ -384,9 +362,6 @@ Clustered column charts, scatter plots, YoY comparisons.
 **Description:**  
 Compares college performance, draft production, and conference dominance. Shows which colleges consistently produce NFL talent.
 
-**Key Visuals Used:**  
-Bar charts, clustered visuals, KPI cards.
-
 ---
 
 ### 🌍 Geographic Analysis
@@ -394,9 +369,6 @@ Bar charts, clustered visuals, KPI cards.
 
 **Description:**  
 Displays where NFL players come from, comparing states, hometowns, and population sizes. Highlights key hotspots for player production.
-
-**Key Visuals Used:**  
-Map visuals, bar charts, filters by position and region.
 
 ---
 
@@ -406,83 +378,12 @@ Map visuals, bar charts, filters by position and region.
 **Description:**  
 Analyzes team win percentages, rookie-veteran balance, and fantasy point totals to reveal long-term performance patterns.
 
-**Key Visuals Used:**  
-Column charts, bar charts, YoY trend visuals.
-
 ---
 
-### ⚙️ Interactivity and Filters
-- Filters by **Year**, **Position**, **Team**, **College**, and **Conference**  
-- Dynamic slicers for **Draft Round**, **Combine Metrics**, and **Age Group**  
-- Hover tooltips for detailed player-level insights
-
----
-
-> 🧩 Built and designed in **Power BI (v2024.3)**  
+> 🧩 Built and designed in **Power BI (v2025)**  
 > 📈 Focus: Connecting player attributes, performance data, and career success
-)
 
-**Description:**  
-Analyzes player performance across years, positions, and teams. Highlights top players, age trends, and fantasy point leaders.
 
-**Key Visuals Used:**  
-Bar charts, column charts, YoY trend lines.
-
----
-
-### 📊 Combine and Draft Analysis
-![Combine and Draft Analysis Dashboard](https://github.com/yourusername/yourrepo/blob/main/images/combine_draft.png)
-
-**Description:**  
-Examines how combine metrics (40YD, Bench, Vertical) and draft rounds relate to career success and early fantasy performance.
-
-**Key Visuals Used:**  
-Clustered column charts, scatter plots, YoY comparisons.
-
----
-
-### 🎓 College and Conference Insights
-![College and Conference Insights Dashboard](https://github.com/yourusername/yourrepo/blob/main/images/college_conference.png)
-
-**Description:**  
-Compares college performance, draft production, and conference dominance. Shows which colleges consistently produce NFL talent.
-
-**Key Visuals Used:**  
-Bar charts, clustered visuals, KPI cards.
-
----
-
-### 🌍 Geographic Analysis
-![Geographic Analysis Dashboard](https://github.com/yourusername/yourrepo/blob/main/images/geographic_analysis.png)
-
-**Description:**  
-Displays where NFL players come from, comparing states, hometowns, and population sizes. Highlights key hotspots for player production.
-
-**Key Visuals Used:**  
-Map visuals, bar charts, filters by position and region.
-
----
-
-### 🏆 Team and League Performance
-![Team and League Performance Dashboard](https://github.com/yourusername/yourrepo/blob/main/images/team_league.png)
-
-**Description:**  
-Analyzes team win percentages, rookie-veteran balance, and fantasy point totals to reveal long-term performance patterns.
-
-**Key Visuals Used:**  
-Column charts, bar charts, YoY trend visuals.
-
----
-
-### ⚙️ Interactivity and Filters
-- Filters by **Year**, **Position**, **Team**, **College**, and **Conference**  
-- Dynamic slicers for **Draft Round**, **Combine Metrics**, and **Age Group**  
-- Hover tooltips for detailed player-level insights
-
----
-
-> 🧩 Built and designed in **Power BI (v2024.3)**  
-> 📈 Focus: Connecting player attributes, performance data, and career success
 
 
 
