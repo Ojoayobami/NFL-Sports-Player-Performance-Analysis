@@ -1,10 +1,10 @@
 # 📌 Project Title
 
-🏈 **NFL Sports & Player Performance Dataset**
+🏈 **NFL Sports & Player Performance Analysis**
 
 ## 📌 Introduction
 
-The **NFL Sports & Player Performance Dataset** is a comprehensive data analytics study designed to explore how **college performance** and **pre-draft athletic metrics** translate into **NFL career success**.  
+The **NFL Sports & Player Performance Analysis** is a comprehensive data analytics study designed to explore how **college performance** and **pre-draft athletic metrics** translate into **NFL career success**.  
 
 By integrating multiple datasets — including **NFL Combine results**, **Draft history**, **College statistics**, and **Professional player performance** — this project uncovers the data-driven patterns behind what makes an athlete successful in the league.  
 
