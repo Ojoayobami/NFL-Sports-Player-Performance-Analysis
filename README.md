@@ -341,7 +341,8 @@ It is divided into five key pages that connect data from combine metrics, colleg
 ---
 
 ### 🏈 Player Performance Overview
-![Player Performance Dashboard](https://github.com/yourusername/yourrepo/blob/main/images/player_performance.png)
+![Player Performance Dashboard](https://github.com/Ojoayobami/NFL-Sports-Player-Performance-Analysis/blob/main/Player%20Performance.png)
+![Player Performance Dashboard](https://github.com/Ojoayobami/NFL-Sports-Player-Performance-Analysis/blob/main/Player%20Performance%20(2).png)
 
 **Description:**  
 Analyzes player performance across years, positions, and teams. Highlights top players, age trends, and fantasy point leaders.
@@ -349,7 +350,8 @@ Analyzes player performance across years, positions, and teams. Highlights top p
 ---
 
 ### 📊 Combine and Draft Analysis
-![Combine and Draft Analysis Dashboard](https://github.com/yourusername/yourrepo/blob/main/images/combine_draft.png)
+![Combine and Draft Analysis Dashboard](https://github.com/Ojoayobami/NFL-Sports-Player-Performance-Analysis/blob/main/Combine%20%26%20Draft%20Analysis.png)
+![Combine and Draft Analysis Dashboard](https://github.com/Ojoayobami/NFL-Sports-Player-Performance-Analysis/blob/main/Combine%20&%20Draft%20Analysis%20(2).png)
 
 **Description:**  
 Examines how combine metrics (40YD, Bench, Vertical) and draft rounds relate to career success and early fantasy performance.
@@ -357,7 +359,7 @@ Examines how combine metrics (40YD, Bench, Vertical) and draft rounds relate to 
 ---
 
 ### 🎓 College and Conference Insights
-![College and Conference Insights Dashboard](https://github.com/yourusername/yourrepo/blob/main/images/college_conference.png)
+![College and Conference Insights Dashboard](https://github.com/Ojoayobami/NFL-Sports-Player-Performance-Analysis/blob/main/College%20Analysis.png)
 
 **Description:**  
 Compares college performance, draft production, and conference dominance. Shows which colleges consistently produce NFL talent.
@@ -365,7 +367,7 @@ Compares college performance, draft production, and conference dominance. Shows 
 ---
 
 ### 🌍 Geographic Analysis
-![Geographic Analysis Dashboard](https://github.com/yourusername/yourrepo/blob/main/images/geographic_analysis.png)
+![Geographic Analysis Dashboard](https://github.com/Ojoayobami/NFL-Sports-Player-Performance-Analysis/blob/main/Geographic%20Analysis.png)
 
 **Description:**  
 Displays where NFL players come from, comparing states, hometowns, and population sizes. Highlights key hotspots for player production.
@@ -373,7 +375,8 @@ Displays where NFL players come from, comparing states, hometowns, and populatio
 ---
 
 ### 🏆 Team and League Performance
-![Team and League Performance Dashboard](https://github.com/yourusername/yourrepo/blob/main/images/team_league.png)
+![Team and League Performance Dashboard](https://github.com/Ojoayobami/NFL-Sports-Player-Performance-Analysis/blob/main/Team%20Analysis.png)
+
 
 **Description:**  
 Analyzes team win percentages, rookie-veteran balance, and fantasy point totals to reveal long-term performance patterns.
